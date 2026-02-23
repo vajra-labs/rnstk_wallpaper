@@ -1,23 +1,13 @@
 {
-  "name": "react-native-wallpaper",
+  "name": "@rnstk/wallpaper",
   "version": "0.1.0",
-  "description": "react-native-wallpaper is a react native package built with Nitro",
+  "license": "MIT",
+  "description": "A react-native module to set home screen and lock screen wallpapers on android.",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
-  "scripts": {
-    "typecheck": "tsc --noEmit",
-    "clean": "git clean -dfX",
-    "release": "semantic-release",
-    "build": "bun run typecheck && bob build",
-    "codegen": "nitrogen --logLevel=\"debug\" && bun run build && node post-script.js"
-  },
-  "keywords": [
-    "react-native",
-    "react-native-wallpaper"
-  ],
   "files": [
     "src",
     "react-native.config.js",
@@ -30,80 +20,51 @@
     "android/gradle.properties",
     "android/CMakeLists.txt",
     "android/src",
-    "ios/**/*.h",
-    "ios/**/*.m",
-    "ios/**/*.mm",
-    "ios/**/*.cpp",
-    "ios/**/*.swift",
     "app.plugin.js",
-    "*.podspec",
     "README.md"
   ],
-  "workspaces": [
-    "example"
-  ],
-  "repository": "https://github.com/aashishpanchal/react-native-wallpaper.git",
-  "author": "aashishpanchal",
-  "license": "MIT",
-  "bugs": "https://github.com/aashishpanchal/react-native-wallpaper/issues",
-  "homepage": "https://github.com/aashishpanchal/react-native-wallpaper#readme",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+  "scripts": {
+    "clean": "git clean -dfX",
+    "lint": "eslint \"./src/**/*.{js,ts,tsx}\"",
+    "lint:fix": "eslint \"./src/**/*.{js,ts,tsx}\" --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+    "build": "bun run typecheck && bob build",
+    "codegen": "nitrogen --logLevel=\"debug\" && bun run build && bun post-script.js"
   },
   "devDependencies": {
     "@jamesacarr/eslint-formatter-github-actions": "^0.2.0",
+    "@react-native/eslint-config": "0.83",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/jest": "^29.5.12",
     "@types/react": "19.2.0",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "eslint": "^8.19.0",
+    "eslint-plugin-prettier": "^5.5.5",
     "nitrogen": "0.33.9",
     "react": "19.2.0",
     "react-native": "0.83",
     "react-native-builder-bob": "^0.40.17",
     "react-native-nitro-modules": "0.33.9",
-    "conventional-changelog-conventionalcommits": "^9.1.0",
     "semantic-release": "^25.0.2",
     "typescript": "^5.8.3"
+  },
+  "workspaces": [
+    "example"
+  ],
+  "repository": "https://github.com/rnstk/wallpaper.git",
+  "author": "Aashish Panchal <aipanchal51@gmail.com>",
+  "bugs": "https://github.com/rnstk/wallpaper/issues",
+  "homepage": "https://github.com/rnstk/wallpaper#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
     "react-native-nitro-modules": "*"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@react-native",
-      "prettier"
-    ],
-    "plugins": [
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "warn",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
-  },
-  "eslintIgnore": [
-    "node_modules/",
-    "lib/"
-  ],
-  "prettier": {
-    "quoteProps": "consistent",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false,
-    "semi": false
   },
   "react-native-builder-bob": {
     "source": "src",

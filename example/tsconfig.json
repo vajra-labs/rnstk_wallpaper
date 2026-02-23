@@ -6,7 +6,7 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "react-native-wallpaper": ["../src"]
+      "@rnstk/wallpaper": ["../src"]
     }
   }
 }
