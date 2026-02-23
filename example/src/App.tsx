@@ -114,7 +114,7 @@ function App(): React.JSX.Element {
       }
 
       // Video path on emulator
-      const videoPath = '/sdcard/Movies/test_video.mp4';
+      const videoPath = '/sdcard/Download/MOBILE-City-Rain-Sasuke.mp4';
 
       await Wallpaper.setLiveWallpaper(videoPath);
       Alert.alert(

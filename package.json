@@ -53,10 +53,10 @@
   "workspaces": [
     "example"
   ],
-  "repository": "https://github.com/rnstk/wallpaper.git",
+  "repository": "https://github.com/vajra-labs/rnstk_wallpaper.git",
   "author": "Aashish Panchal <aipanchal51@gmail.com>",
-  "bugs": "https://github.com/rnstk/wallpaper/issues",
-  "homepage": "https://github.com/rnstk/wallpaper#readme",
+  "bugs": "https://github.com/vajra-labs/rnstk_wallpaper/issues",
+  "homepage": "https://github.com/vajra-labs/rnstk_wallpaper#readme",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

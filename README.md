@@ -2,6 +2,10 @@
 
 A powerful React Native library for setting wallpapers (static and live video wallpapers) on Android using Nitro Modules for maximum performance.
 
+> **⚠️ Beta Version:** This library is currently in beta. APIs may change in future releases.
+
+https://github.com/user-attachments/assets/wallpaper.webm
+
 ## Features
 
 ✨ **Static Wallpapers**
@@ -310,3 +314,7 @@ await PermissionsAndroid.request(
 ## Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
+
+## License
+
+MIT © [Aashish Panchal](https://github.com/vajra-labs)
