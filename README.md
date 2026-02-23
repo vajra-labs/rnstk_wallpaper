@@ -4,8 +4,6 @@ A powerful React Native library for setting wallpapers (static and live video wa
 
 > **⚠️ Beta Version:** This library is currently in beta. APIs may change in future releases.
 
-https://github.com/user-attachments/assets/wallpaper.webm
-
 ## Features
 
 ✨ **Static Wallpapers**
